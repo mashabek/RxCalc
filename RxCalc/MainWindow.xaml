@@ -1,0 +1,67 @@
+﻿<Window
+    x:Class="RxCalc.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:RxCalc"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="400"
+    Height="450"
+    mc:Ignorable="d">
+    <DockPanel>
+        <TextBlock Height="100" DockPanel.Dock="Top"/>
+        <Grid x:Name="keyboard" DockPanel.Dock="Bottom">
+            <Grid.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="FontSize" Value="18"></Setter>
+                    <Setter Property="BorderThickness" Value="0.9"></Setter>
+                    <Setter Property="BorderBrush" Value="LightGray"></Setter>
+                </Style>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button>M+</Button>
+            <Button Grid.Column="1">MC</Button>
+            <Button Grid.Column="2">C</Button>
+            <Button Grid.Column="3">BACK</Button>
+
+            <Button Grid.Row="1">MR</Button>
+            <Button Grid.Row="1" Grid.Column="1">%OF</Button>
+            <Button Grid.Row="1" Grid.Column="2">±</Button>
+            <Button Grid.Row="1" Grid.Column="3">÷</Button>
+
+            <Button Grid.Row="2">7</Button>
+            <Button Grid.Row="2" Grid.Column="1">8</Button>
+            <Button Grid.Row="2" Grid.Column="2">9</Button>
+            <Button Grid.Row="2" Grid.Column="3">×</Button>
+
+            <Button Grid.Row="3">4</Button>
+            <Button Grid.Row="3" Grid.Column="1">5</Button>
+            <Button Grid.Row="3" Grid.Column="2">6</Button>
+            <Button Grid.Row="3" Grid.Column="3">-</Button>
+
+            <Button Grid.Row="4">1</Button>
+            <Button Grid.Row="4" Grid.Column="1">2</Button>
+            <Button Grid.Row="4" Grid.Column="2">3</Button>
+            <Button Grid.Row="4" Grid.Column="3">+</Button>
+
+            <Button Grid.Row="5">CONST</Button>
+            <Button Grid.Row="5" Grid.Column="1">0</Button>
+            <Button Grid.Row="5" Grid.Column="2">.</Button>
+            <Button Grid.Row="5" Grid.Column="3">=</Button>
+        </Grid>
+    </DockPanel>
+</Window>
